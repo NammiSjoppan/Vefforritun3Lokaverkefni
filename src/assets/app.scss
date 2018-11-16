@@ -1,0 +1,11 @@
+@import "./variables.scss";
+
+.container {
+  h1 {
+    background-color: $primaryColor;
+  }
+
+  p {
+    background-color: $secondaryColor;
+  }
+}

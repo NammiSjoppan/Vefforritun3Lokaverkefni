@@ -1,21 +1,27 @@
 <template>
   <div id="app">
     <div class="container">
-      <h1>Lokaverkefni</h1>
-      <p>Engill Þór</p>
-      <p>Halló Heimur</p>
+      
     </div>
   </div>
 </template>
 
 <script>
-
+import axios from 'axios';
 
 export default {
+
+    name: 'app',
+ 
+    mounted() {
+        axios.get("http://apis.is/petrol")
+            .then(response => {
+                this.results = response.data.results})
+    },
 
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" src="./assets/app.scss">
 
 </style>
