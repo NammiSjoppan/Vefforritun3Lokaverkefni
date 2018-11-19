@@ -9,3 +9,30 @@
     background-color: $secondaryColor;
   }
 }
+
+#app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#resultContainer {
+	display: flex;
+	justify-content: center;
+}
+
+#masterBox{
+	width: fit;
+	border: solid 2px;
+}
+
+#headers{ 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	border: solid 1px;
+	font-size: 35px;
+
+}
