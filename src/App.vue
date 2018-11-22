@@ -1,15 +1,16 @@
 <template>
     <div id="app">
         <div id="masterBox">
-            <div id="headers">
-                <h1 style="border: solid 1px"> Bensín95 </h1>
-                <h1 style="border: solid 1px"> Bensín95 Afsláttur </h1>
-                <h1 style="border: solid 1px"> Diesel </h1>
-                <h1 style="border: solid 1px"> Diesel Afsláttur </h1>
-                <h1 style="border: solid 1px"> Company </h1>
+            <div id="sortButtons">
+                <button class="button" style="border: solid 1px" v-for="cat in categoryName"> {{ cat }} </button>
+                
             </div>
-            <div v-for="result in results" class="box" id="resultContainer">
-                <p> {{ result.bensin95 }} </p>
+            <div v-for="result in results" class="box" id="resultContainer">   
+                <p style="border: solid 0px"> {{ result.bensin95 }} </p>
+                <p style="border: solid 0px"> {{ result.bensin95_discount }} </p>
+                <p style="border: solid 0px"> {{ result.diesel }} </p>
+                <p style="border: solid 0px"> {{ result.diesel_discount }} </p>
+                <p style="border: solid 0px"> {{ result.company }} </p>
             </div>
         </div>
     </div>
@@ -24,7 +25,8 @@ export default {
 
     data() {
         return{
-            results: []
+            results: [],
+            categoryName: ['Bensín95', 'Dísel', 'Bensín95 Afsláttur', 'Dísel Afsláttur', 'Fyrirtæki']
         }
     },
  
