@@ -1,3 +1,38 @@
+
+/* Import */
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+/* Main colours for theme */
+
+
+    /* Background colours */
+	$body-bg: #121212; 
+	$first-card-bg: #212121; 
+    $second-card-bg: #171717; 
+    $third-card-bg: #121212; 
+    
+    /* Font */
+    /*font: Quicksand, Roboto, Tahoma, Verdana, Arial;*/
+    
+    /* Font colours */
+	$first-color: #777 ; /* Dark Grey */
+	$second-color: #555; /* Darker Grey */
+    $third-color: #ff007e; /* Pink */
+    $fourth-color: #00fff6; /* Cyan */
+    
+    /* Transition */
+    $transition: text-shadow .3s, color .3s, border-color .3s, box-shadow .3s, background .3s, background-color .3s;
+
+
+
+
+
+
+
+
+
+$gradient: linear-gradient(to right, #ff007e, #00fff6);
+
 $primaryColor: #ff007e;
 
 $secondaryColor: #00fff6;
