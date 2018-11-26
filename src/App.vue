@@ -52,6 +52,11 @@ export default {
                 this.results = response.data.results})
     },
 
+    computed: {
+        orderedUsers() {
+            return _.orderBy(this.users, 'name')
+        }
+    }
 }
 </script>
 
