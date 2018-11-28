@@ -2,7 +2,12 @@
     <div id="app">
         <div id="masterBox">
             <div id="sortButtons">
-                <button class="button" v-for="cat in categoryName"> {{ cat }} </button>
+                <!-- <button class="button" v-for="cat in categoryName"> {{ cat }} </button> -->
+                <button class="button" @click="orderBensin95"> Bensín95 </button>
+                <button class="button"> Dísel </button>
+                <button class="button"> Bensín95 Afsláttur </button>
+                <button class="button"> Dísel Afsláttur </button>
+                <button class="button"> Fyrirtæki </button>
                 
             </div>
             <div v-for="result in results" class="box" id="resultContainer"> 
@@ -10,10 +15,10 @@
                     <p style="border: solid 0px"> {{ result.bensin95 }} </p>
                 </div>
                 <div>
-                    <p style="border: solid 0px"> {{ result.bensin95_discount }} </p>
+                    <p style="border: solid 0px"> {{ result.diesel }} </p>
                 </div>
                 <div>
-                    <p style="border: solid 0px"> {{ result.diesel }} </p>
+                    <p style="border: solid 0px"> {{ result.bensin95_discount}} </p>
                 </div>
                 <div>
                     <p style="border: solid 0px"> {{ result.diesel_discount }} </p>
@@ -53,8 +58,8 @@ export default {
     },
 
     computed: {
-        orderedUsers() {
-            return _.orderBy(this.users, 'name')
+        orderBensin95() {
+            this.results.sort();
         }
     }
 }
