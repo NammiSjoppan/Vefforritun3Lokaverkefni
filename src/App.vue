@@ -3,14 +3,14 @@
         <div id="masterBox">
             <div id="sortButtons">
                 <!-- <button class="button" v-for="cat in categoryName"> {{ cat }} </button> -->
-                <button class="button" @click="orderBensin95"> Bensín95 </button>
+                <button class="button" @click="bensinOrder"> Bensín95 </button>
                 <button class="button"> Dísel </button>
                 <button class="button"> Bensín95 Afsláttur </button>
                 <button class="button"> Dísel Afsláttur </button>
                 <button class="button"> Fyrirtæki </button>
                 
             </div>
-            <div v-for="result in results" class="box" id="resultContainer"> 
+            <div v-for="result in orderBensin95" class="box" id="resultContainer"> 
                 <div>
                     <p style="border: solid 0px"> {{ result.bensin95 }} </p>
                 </div>
@@ -59,8 +59,17 @@ export default {
 
     computed: {
         orderBensin95() {
-            this.results.sort();
+            return this.results.filter(bensin => {
+                return bensin.bensin95
+            })
         }
+    },
+
+    methods: {
+        bensinOrder() {
+            this.orderBensin95    
+        }
+        
     }
 }
 </script>
